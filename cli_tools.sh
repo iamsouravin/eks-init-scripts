@@ -4,7 +4,7 @@ sudo yum install -y jq gettext bash-completion moreutils
 sudo pip install --upgrade pip
 
 # AWS CLI v2
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+curl --silent "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 rm -rf awscliv2.zip aws
