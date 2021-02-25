@@ -2,7 +2,6 @@ cd ~
 sudo yum groupinstall 'Development Tools' -y
 sudo yum install -y jq gettext bash-completion moreutils
 sudo pip install --upgrade pip
-sudo pip install awscli --upgrade
 
 # AWS CLI v2
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
