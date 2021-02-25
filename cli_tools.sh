@@ -25,9 +25,14 @@ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get
 chmod 700 get_helm.sh
 ./get_helm.sh
 rm -rf get_helm.sh
+helm version
 
 # Install Flux v2 CLI
-curl -s https://toolkit.fluxcd.io/install.sh | sudo bash
+wget https://github.com/fluxcd/flux2/releases/download/v0.8.0/flux_0.8.0_linux_amd64.tar.gz
+tar -zxvf flux_0.8.0_linux_amd64.tar.gz
+sudo mv ./flux /usr/local/bin/flux
+rm -rf flux_0.8.0_linux_amd64.tar.gz
+flux --version
 
 aws eks update-kubeconfig --name 'GitOps-Workshop'
 
