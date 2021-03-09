@@ -28,10 +28,10 @@ rm -rf get_helm.sh
 helm version
 
 # Install Flux v2 CLI
-wget https://github.com/fluxcd/flux2/releases/download/v0.8.0/flux_0.8.0_linux_amd64.tar.gz
-tar -zxvf flux_0.8.0_linux_amd64.tar.gz
+wget https://github.com/fluxcd/flux2/releases/download/v0.9.0/flux_0.9.0_linux_amd64.tar.gz
+tar -zxvf flux_0.9.0_linux_amd64.tar.gz
 sudo mv ./flux /usr/local/bin/flux
-rm -rf flux_0.8.0_linux_amd64.tar.gz
+rm -rf flux_0.9.0_linux_amd64.tar.gz
 flux --version
 
 aws eks update-kubeconfig --name 'GitOps-Workshop'
