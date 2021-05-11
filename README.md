@@ -47,7 +47,7 @@ Template file with envrionment variables used to generate `cluster-config.yaml`.
 | **Desired Capacity** | `1` |
 | **Min Size** | `1` |
 | **Max Size** | `2` |
-| **Private Networking** | `true   |
+| **Private Networking** | `true` |
 | **Volume Size** | 100 GiB |
 | **Volume Type** | `gp2` |
 | **Volume Encrypted** | `true` |
