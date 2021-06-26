@@ -43,3 +43,5 @@ flux --version
 
 popd
 source ./env.txt
+
+aws eks update-kubeconfig --name GitOps-Workshop
