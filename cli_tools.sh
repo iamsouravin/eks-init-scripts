@@ -17,13 +17,13 @@ sudo ./aws/install $AWS_CLI_INSTALL_OPTS
 rm -rf awscliv2.zip aws
 
 # Install kubectl
-curl -LO --silent https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+curl -LO --silent https://storage.googleapis.com/kubernetes-release/release/v1.19.12/bin/linux/amd64/kubectl
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 kubectl version --short --client
 
 # Install eksctl
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/0.54.0/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv -v /tmp/eksctl /usr/local/bin
 eksctl version
 
