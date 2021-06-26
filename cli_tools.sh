@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ~
 sudo yum groupinstall 'Development Tools' -y
 sudo yum install -y jq gettext bash-completion moreutils
