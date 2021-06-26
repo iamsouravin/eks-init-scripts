@@ -33,3 +33,5 @@ tar -zxvf flux_0.9.0_linux_amd64.tar.gz
 sudo mv ./flux /usr/local/bin/flux
 rm -rf flux_0.9.0_linux_amd64.tar.gz
 flux --version
+
+source env.txt
