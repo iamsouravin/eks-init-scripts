@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~
+pushd ~
 sudo yum groupinstall 'Development Tools' -y
 sudo yum install -y jq gettext bash-completion moreutils
 sudo pip install --upgrade pip
@@ -41,4 +41,5 @@ sudo mv ./flux /usr/local/bin/flux
 rm -rf flux_0.9.0_linux_amd64.tar.gz
 flux --version
 
+popd
 source ./env.txt
