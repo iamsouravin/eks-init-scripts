@@ -4,9 +4,14 @@ sudo yum install -y jq gettext bash-completion moreutils
 sudo pip install --upgrade pip
 
 # AWS CLI v2
+AWS_CLI_VERSION=$(aws --version | cut -d/ -f2 | cut -d. -f1)
+AWS_CLI_INSTALL_OPTS=""
+if [[ "$AWS_CLI_VERSION" -eq 2 ]]; then
+  AWS_CLI_INSTALL_OPTS="--update"
+fi
 curl --silent "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
-sudo ./aws/install
+sudo ./aws/install $AWS_CLI_INSTALL_OPTS
 rm -rf awscliv2.zip aws
 
 # Install kubectl
