@@ -2,7 +2,7 @@
 
 if [ "$#" -ne 1 ]; then
     echo "Cluster name is required."
-    exit 1
+    return 1
 fi
 
 CLUSTER_NAME="$1"
